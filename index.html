@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- balises metadonnées -->
+        <meta charset="UTF-8">
+        <!-- description du site -->
+        <meta name="description" content="Laissez-vous transporter par un voyage culinaire!">
+        <!-- mots clé SEO -->
+        <meta name="keywords" content="entrée, plat, dessert, brésil, chine, cameroun, ile maurice, pão de queijo, coxinha, pastel, vatapá, maniçoba, feijoada, creme de cupuaçu, açai, tapioca, macaxeira">
+        <!-- compabtibilté avec IE Edge -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- titre -->
+        <title>Restaurant Saveurs du Monde</title>
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+        <!-- lien css  -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- biblioteque de police -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+         <!-- Biblioteque d'icones -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+
+        <!-- HEADER : En-tete du site -->
+
+            <header class="nav" role="navigation" aria-label="Menu principal">
+
+                <!-- logo -->
+                <a class="logo" href="#" target="_blank" rel="noopener noreferrer"><img  src="./image/logo.png" alt="logo">
+                </a>
+                <!-- titre -->
+                <h1>Saveurs du Monde</h1>
+
+                <!-- menu de navigation -->
+                <ul class="menu_nav">
+                    <li class="menuToggle" onclick="toggleMenu();"><a href="#">Accueil</a></li>
+                    <li><a href="#propos">À propos</a></li>
+
+                    <li id="menu_deroulant"><a href="menu.html" onclick="toggleMenu();">Menu</a>
+                        <ul class="sous-menu_nav">
+                         <li> <a href="./Bresil/bresil.html">Bresil</a></li>
+                         <li> <a href="./Cameroun/cameroun.html"> Cameroun</a></li>
+                         <li> <a href="./Chine/chine.html"> Chine</a></li>
+                         <li> <a href="./Ile Maurice/imaurice.html"> Ile Maurice</a></li></ul>
+
+                    <li><a href="#"onclick="toggleMenu();">Commandes</a></li>
+                    <li><a href="#temoignage"onclick="toggleMenu();">Témoignage</a></li>
+                    <li><a href="#contact"onclick="toggleMenu();">Contact</a></li>
+                    <li><a href="#panier" onclick="toggleMenu();"> <i class="fa-solid fa-cart-plus"></i></a></li>
+                </ul>
+
+                 <!-- <div class="burger">
+                    <i class="fa-solid fa-bars"></i>
+                </div> -->
+
+            </header>
+
+        <!-- MAIN : Contenu  principal -->
+        <main role="main">
+
+
+            <div id="banner" role="banner" class="banner">
+
+                    <img src="./image/background_image_first.jpg" alt="background_image_first">
+
+                <div class="filtre"></div>
+
+                <div class="banner__title">
+                    <h1>Laissez vous transporter par un voyage culinaire!</h1>
+                    <h2>Vivez une expérience inoubliable de à travers notre sélection de plats authentiques !</h2>
+                    
+
+                    <div class="containeur_btn">
+                        <button><a href="#" target="_blank" rel="noopener noreferrer"> Notre Carte</a></button>
+
+
+                        <!-- Modal contennue de réservation -->
+                        <section class="modal hidden">
+                            <div class="flex">
+                              <button class="btn-close">⨉</button>
+                            </div>
+                            <div class="reservation">
+                              <h3>Formulaire de réservation</h3>
+                              <p class="reservation-P">Remplire les informations, et 
+                               réservez votre table chez nous. A très bientôt :
+                              </p>
+                            </div>
+                            <input type="text" id="name" name="name" placeholder="votre nom">
+                            <input type="email" id="email" name="email" placeholder="votre email" />
+                            <input type="tel" id="phone" name="phone"
+                                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="votre numéro de tel"
+                                   required>
+                           
+                            <label for="cars">Nombre d'invité:</label>
+                            <select id="cars">
+                              <option value="1">1 personne</option>
+                              <option value="2" selected>2 personnes</option>
+                              <option value="3">3 personnes</option>
+                              <option value="4">plus que 3 personnes</option>
+                            </select>
+                        
+                            choisi la date de réservation : <input type="date">
+
+                            <div class="overlay hidden"></div>
+                        
+                            <button class="btn ">réserver dès maintenant</button>
+                          </section>
+                          
+                        <button class="btn btn-open"><a >Réservation</a></button>
+                    </div>
+                </div>
+            </div>
+        
+
+
+
+            <article role="article">
+                    
+                <!-- SECTION : A propos -->
+                <section class="a_propos" id="propos">
+                    <div class="txt_a_propos">
+                        <h2><span>A</span> Propos De Nous</h2>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+
+                    <div class="img_a_propos">
+                        <img src="./image/a_propos.jpg" alt="tanyuan">
+                        <figcaption>Tan Yuan</figcaption>
+                    </div>
+
+                </section>
+            
+                  <!-- SECTION : titre-->
+                <section class="menu">
+                    <h2><span>M</span>enu</h2>
+
+                    <p>Bon Appétit et surtout régalez vous! </p>
+
+                    <h2>Les Favorits</h2>
+
+                    <h2>Entrées:</h2>
+                    <div class="hr"></div>
+                </section>
+
+            <!-- SECTION : entrees, plats et desserts favoris-->
+                <section class = "containeur">
+
+                    <div class="containeur_produit e1">
+                        <a href="./Chine/chine.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/chine/beignet de crevette.jpeg" alt="beignet_crevette">
+                            
+
+                            <h3>Beignets de Crevettes</h3>
+                        
+
+                            <div class="stars">
+
+                                <span>6.00€ | 5 pièces</span>
+                
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="containeur_produit e2">
+                        <a href="./Cameroun/cameroun.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/cameroun/plantains frits.jpg" alt="bananes plantains">
+                            <h3>Plantains frits</h3>
+                            <div class="stars">
+                                <span>10.00€</span>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="containeur_produit e3">
+                        <a href="./Bresil/bresil.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/bresil/Pao-de-queijo.jpg" alt="Pao-de-queijo">
+                            <h3>Pães de Queijo</h3>
+                            <div class="stars">
+                                <span>5.00€ | 8 pièces</span>
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <section class="menu">
+                    <h2>Plats:</h2>
+                    <div class="hr"></div>
+                </section>
+
+                <section class = "containeur">
+                <a href="./Cameroun/cameroun.html" target="_blank" rel="noopener noreferrer">
+                    <div class="containeur_produit p1">
+                        
+                        <img src="./image/cameroun/ndole.jpg" alt="Ndole">
+
+                        <h3>Ndole</h3>
+
+                        <div class="stars">
+
+                            <span>20.00€</span>
+            
+                            <div>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+
+
+                    <div class="containeur_produit p2">
+                        <a href="./Bresil/bresil.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/bresil/feijoada.jpg" alt="Feijoada">
+
+                            <h3>Feijoada</h3>
+
+                            <div class="stars">
+
+                                <span>17.00€</span>
+                
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a> 
+                    </div>
+
+
+                    <div class="containeur_produit p3">
+                        <a href="./Chine/chine.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/chine/Poisson entier à la vapeur.jpg" alt="Poisson entier">
+                        
+                            <h3>Poisson entier à la vapeur</h3>
+                        
+                            <div class="stars">
+
+                                <span>17.00€</span>
+                
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </section>
+
+                <section class="menu">
+                    <h2>Desserts:</h2>
+                    <div class="hr"></div>
+                </section>
+
+                <section class = "containeur">
+                    <a href="./Bresil/bresil.html" target="_blank" rel="noopener noreferrer">
+                        <div class="containeur_produit d1">
+                            
+                            <img src="./image/bresil/bolo-de-macaxeira.jpg" alt="bolo de macaxeira">
+
+                            <h3>Bolo de Macaxeira com Erva doce</h3>
+
+                            <div class="stars">
+
+                                <span>6.00€ | 1 pièce</span>
+                
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="containeur_produit d2">
+                        <a href="./Chine/chine.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/chine/gâteaux de lune.jpeg" alt="Gâteaux de lune">
+
+                            <h3>Gâteaux de Lune</h3>
+
+                            <div class="stars">
+
+                                <span>3.00€ | 1 pièce</span>
+                
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="containeur_produit d3">
+                        <a href="./Cameroun/cameroun.html" target="_blank" rel="noopener noreferrer">
+                            <img src="./image/cameroun/corossol.jpg" alt="corossol">
+
+                            <h3>Corossol</h3>
+                        
+
+                            <div class="stars">
+
+                                <span>3.00€ | 1 pièce</span>
+                
+                                <div>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </section>
+
+                <section class="menu">
+                    <h2>Nos <span>E</span>xperts</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </p>
+                </section>
+
+                <section class="expert">
+                    <figure>
+                        <img src="./image/equipe1.jpg" alt="frontend">
+                        <figcaption>Kacha</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./image/equipe2.jpg" alt="laravel">
+                        <figcaption>Paola Carosella</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./image/equipe3.jpg" alt="laravel">
+                        <figcaption>Shelina Permalloo</figcaption>
+                    </figure>    
+                    <figure>
+                        <img src="./image/equipe4.jpg" alt="laravel">
+                        <figcaption>Samuel Lee Sum</figcaption>
+                    </figure>
+                </section>
+
+                <section class="menu" id="temoignage">
+                    <h2>Que Disent Nos <span>C</span>lients</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. </p>
+                </section>
+
+                <div class="containeur_temoignage">
+
+                    <div class="temoignage t1">
+
+                        <img src="./image/t1.jpeg" alt="temoignage1">
+    
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    
+                            <span>Julien Clerck</span>
+                        </div>
+                    
+    
+                    <div class="temoignage t2">
+
+                        <img src="./image/t2.jpg" alt="temoignage2">
+    
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+    
+                            <span>Steve Fu</span>
+                        </div>
+
+                        <div class="temoignage t3">
+
+                            <img src="./image/t3.jpg" alt="temoignage3">
+        
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        
+                                <span>Anna Torrez</span>
+                            </div>
+
+                </div>
+    
+                   
+            </div>
+        </div>
+    </div>
+
+                <section class="contact" id="contact">
+                    <div class="titre_noir">
+                        <h2><span>C</span>ontact</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    </div>
+                    <div class="contactform">
+                        <h3>Envoyer un message</h3>
+                        <div class="inputboite">
+                            <input type="text" placeholder="Nom">
+                        </div>
+                        <div class="inputboite">
+                           <input type="text" placeholder="email">
+                        </div>
+                        <div class="inputboite">
+                           <textarea placeholder="message"></textarea>
+                        </div>
+                        <div class="inputboite">
+                            <input type="submit" value="envoyer">
+                        </div>
+                    </div>
+                </section> 
+            </article>
+
+
+    
+           
+        </main>
+
+
+        <!-- FOOTER : pied de page du site -->
+        <footer id="pied" role="contentinfo">
+            <p>© copyright 2023 <span> Li,  Dalina, Leslie et Amanda</span>. Tous droits réservés.</p>
+        </footer>
+
+        <!-- Emplacement des script JavaScript -->
+        <script src="./js/index.js"></script>
+
+    </body>
+
+</html>

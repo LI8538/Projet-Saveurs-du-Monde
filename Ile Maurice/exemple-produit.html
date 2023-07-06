@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- lien vers le css -->
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontawesomme icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Restaurant africain</title>
+<body>
+<header>
+    <div class="logo">
+        <img src="../img/logo1.jpeg" alt="logo">
+    </div>
+    <div class="menuToggle" onclick="toggleMenu();"></div>
+    <nav class="navigation">
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html" onclick="toggleMenu();">Accueil</a></li>
+                <li><a href="#apropos" onclick="toggleMenu();">A propos</a></li>
+                <li><a href="#menu" onclick="toggleMenu();">Menu</a></li>
+                <li><a href="#expert" onclick="toggleMenu();">Expert</a></li>
+                <li><a href="#temoignage" onclick="toggleMenu();">Temoignage</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+                <li>
+                <a href="#panier" onclick="toggleMenu();"> <i class="fa-solid fa-cart-plus"></i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- <div class="burger">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
+    </nav>
+</header>
+<!-- <section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2>Épicez votre vie avec les saveurs africaines !</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, deleniti!</p> 
+         <a href="#" class="btn1">Notre Menu</a>
+        <a href="#" class="btn2">Reservation</a>
+    </div>
+</section> -->
+
+<section class="menu" id="menu">
+    <div class="titre">
+        <h2 class="titre-texte"><span>P</span>oisson <span>B</span>raisé</h2>
+    
+    </div>
+    <div class="menu-eru">
+    <div class="contenu">
+        <div class="box">
+            <div class="imbox">
+             <a href="">   <img src="./images/poisson_braisé.jpg" alt=""></a>
+            </div>
+            <!-- <div class="text">
+                <h3>Poisson Braisé</h3>
+                
+            </div> -->
+            <div class="stars">
+                <!-- <span>18.00€</span> -->
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <div class="text">
+              <h3>18.00€</h3>
+               
+            </div>
+            
+            
+                <label for="quantity">Nombre de plats:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="20">
+
+              <button onclick="">Ajouter au panier</button>
+            <h3>Description du menu eru</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid itaque neque tempore ea corporis provident molestias quae, cupiditate, corrupti placeat unde quos, cumque non dignissimos sed magnam natus facere totam.</p>
+            <h3>Ingrédients</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic commodi, aut ratione temporibus corrupti laboriosam incidunt laudantium obcaecati, vel placeat aliquid, quo quis blanditiis aperiam pariatur reprehenderit perspiciatis recusandae? Voluptas!</p>
+        </div>
+    </div>
+        </section>
+
+
+
+        <div class="copyright">
+            <p>copyright 2021 <a href="#">Yao kevin</a> youtube tutoriel. Tous droits reservé</p>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener('scroll', function(){
+                const header =document.querySelector('header');
+                header.classList.toggle("sticky", window.scrollY > 0 );
+            }); 
+       
+            function toggleMenu(){
+                const menuToggle = document.querySelector('.menuToggle');
+                const navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            }
+        </script>
+        <script>
+           const menuHamburger = document.querySelector(".burger")
+           const navLinks = document.querySelector(".navbar")
+       
+           menuHamburger.addEventListener('click',()=>{
+           navLinks.classList.toggle('mobile-menu')
+           })
+       </script>
+       </body>
+       </html>
